@@ -17,9 +17,8 @@
 
 #define WS2812_MATRIX_DATA_PIN 13
 
-#define WIFI_SSID "Justus' iPhone"
-#define WIFI_PASSWORD "wwwwqqqq"
-
+#define WIFI_SSID "Superman"
+#define WIFI_PASSWORD "ji020717"
 
 Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(
         32,
@@ -83,7 +82,8 @@ public:
         for (int i = 0; i < displayTime; i++) {
             matrix.fillScreen(bgColour);
 
-            matrix.setCursor(isTextScrolling ? cursorX : 9, 7);
+            matrix.setCursor(isTextScrolling ? cursorX : 12, 7);
+            // matrix.setCursor(isTextScrolling ? cursorX : 9, 7);
             matrix.print(text);
 
             if (this->icon != nullptr) {
@@ -104,7 +104,8 @@ private:
     int gmtOffset;
 public:
     explicit PageTime(int gmtOffset) :
-            PageText(&icon_7645, "?", matrix.Color(0, 0, 0), matrix.Color(255, 255, 255)),
+            // icon_7645 - clock icon
+            PageText(&icon_5588, "?", matrix.Color(0, 0, 0), matrix.Color(255, 255, 255)),
             gmtOffset(gmtOffset) {
 
     }
@@ -124,13 +125,13 @@ public:
 
         strftime(this->text, sizeof(this->text), "%H:%M", &timeinfo);
         PageText::render();
-        delay(2000);
+        // delay(2000);
 
-        strftime(this->text, sizeof(this->text), "%d/%m", &timeinfo);
-        PageText::render();
+        // strftime(this->text, sizeof(this->text), "%d/%m", &timeinfo);
+        // PageText::render();
 
-        strftime(this->text, sizeof(this->text), "%a", &timeinfo);
-        PageText::render();
+        // strftime(this->text, sizeof(this->text), "%a", &timeinfo);
+        // PageText::render();
     }
 };
 
@@ -170,8 +171,8 @@ public:
 
 Page *pages[] = {
         new PageTime(8),
-        new PageWeather(),
-        new PageText(&icon_5588, "Have a nice day!", matrix.Color(0, 0, 0), matrix.Color(255, 255, 255)),
+        // new PageWeather(),
+        // new PageText(&icon_5588, "Have a nice day!", matrix.Color(0, 0, 0), matrix.Color(255, 255, 255)),
         //icon_1769
 };
 Page *pageNoWifi = new PageText(&icon_26910, "No Wifi", matrix.Color(0, 0, 0), matrix.Color(255, 255, 255));
@@ -184,7 +185,7 @@ void setup() {
 
     matrix.begin();
     matrix.setTextWrap(false);
-    matrix.setBrightness(30);
+    matrix.setBrightness(10);
     matrix.setFont(&TomThumb);
 
     WiFi.disconnect(true);

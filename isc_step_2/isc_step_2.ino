@@ -27,7 +27,7 @@ void setup() {
 
     // Set the username and password of the WiFi that the ESP32 is supposed to connect to.
     // After this is set, ESP32 will connect to this WiFi and reconnect to it automatically when disconnected later.
-    WiFi.begin("Robot-Operating-System-Wifi", "ros-workshop");
+    WiFi.begin("Sing Iphone", "singsing0703");
 
     // Print out a simple "Hello!" message
     // matrix.print("Hello!");
