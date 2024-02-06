@@ -1,9 +1,9 @@
-## 8. Upload Sample Program
+## 9. Upload Sample Program
 
 In this section, you can program the ESP32 to display messages on the LED matrix using the Arduino IDE and C++
 programming language.
 
-### 8.1. Installing Arduino IDE
+### 9.1. Installing Arduino IDE
 
 ---
 
@@ -15,7 +15,7 @@ If you are using a computer in HKU InnoWing, it should already have the Arduino 
 2. Download the Arduino IDE for your operating system (Windows, Mac, or Linux).
 3. Install the Arduino IDE by following the on-screen instructions.
 
-### 8.2. Installing ESP32 Support
+### 9.2. Installing ESP32 Support
 
 1. Open the Arduino IDE.
 2. Go to `File` > `Preferences`.
@@ -29,7 +29,7 @@ If you are using a computer in HKU InnoWing, it should already have the Arduino 
 9. Wait for the installation to complete.
 10. Close the Boards Manager window.
 
-### 8.3. Installing Adafruit_NeoMatrix Library
+### 9.3. Installing Adafruit_NeoMatrix Library
 
 1. Go to `Sketch` > `Include Library` > `Manage Libraries`.
 2. Search for `Adafruit_NeoMatrix`.
@@ -39,7 +39,7 @@ If you are using a computer in HKU InnoWing, it should already have the Arduino 
 6. Wait for the installation to complete.
 7. Close the Library Manager window.
 
-### 8.4. Uploading your first sketch to ESP32
+### 9.4. Uploading your first sketch to ESP32
 
 1. Start a new sketch.
 2. Enter the following code:
@@ -87,3 +87,14 @@ If you are using a computer in HKU InnoWing, it should already have the Arduino 
 9. After the program is flashed, the text “Hello!” will be shown on the screen.
 
 ![](result.jpg)
+
+### 9.5. Mini Challenges
+
+Well done on successfully displaying a message. Try to understand the above code.
+Try to modify the above code to perform the following.
+
+- Change the text to `World!`
+- Change colour of the message to red
+- Change colour of the background dark blue
+
+Search Google for which Adafruit NeoMatrix library function to be called.
