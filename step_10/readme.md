@@ -77,11 +77,14 @@
    "Banana");`
 
 3. Upload the code.
-4. After the program is flashed, the ESP32 will restart, then try to connect to the WiFi using the predefined
-   credentials. After connecting it successfully, the current time will be shown on the screen. Even if the WiFi is
-   disconnected during the operation later, the time can still be updated.
 
 ![](result.jpg)
+
+- After the program is flashed, the ESP32 will restart, then try to connect to the WiFi using the predefined
+  credentials. After connecting it successfully, the current time will be shown on the screen.
+- Even if the WiFi is disconnected after initialisation, the time will still be updated offline.
+- It fetches the current time using the NTP (Network Time Protocol) from the official NTP Project server (pool.ntp.org).
+- Time offset can be freely adjusted
 
 ### Mini Challenges
 
